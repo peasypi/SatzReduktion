@@ -25,10 +25,10 @@ Erik Körner, koerner@informatik.uni-leipzig.de (Raum P906)
 ### Links
 
 #### Stanford NER-Tool
-https://nlp.stanford.edu/software/CRF-NER.shtml
-https://mareikeschumacher.de/tutorial-wie-ich-stanford-ner-mit-deutschen-classifiern-installiere-und-nutze/ 
-https://nlpado.de/~sebastian/software/ner_german.shtml 
+# https://nlp.stanford.edu/software/CRF-NER.shtml
+# https://mareikeschumacher.de/tutorial-wie-ich-stanford-ner-mit-deutschen-classifiern-installiere-und-nutze/ 
+# https://nlpado.de/~sebastian/software/ner_german.shtml 
 
 #### GermaNER
-https://github.com/tudarmstadt-lt/GermaNER 
-https://github.com/MaviccPRP/ger_ner_evals 
+# https://github.com/tudarmstadt-lt/GermaNER 
+# https://github.com/MaviccPRP/ger_ner_evals 
