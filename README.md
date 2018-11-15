@@ -33,7 +33,7 @@ Erik Körner, koerner@informatik.uni-leipzig.de (Raum P906)
 * https://github.com/tudarmstadt-lt/GermaNER 
 * https://github.com/MaviccPRP/ger_ner_evals 
 
-###spacy
+### SpaCy
 * https://towardsdatascience.com/named-entity-recognition-with-nltk-and-spacy-8c4a7d88e7da
 
 #### Named Entity Recognition with Tensorflow
@@ -44,7 +44,9 @@ Erik Körner, koerner@informatik.uni-leipzig.de (Raum P906)
 * https://de.wikipedia.org/wiki/Liste_der_gr%C3%B6%C3%9Ften_Unternehmen_in_Deutschland_(Wertsch%C3%B6pfung) - Liste der größten deutschen Unternehmen
 * https://de.wikipedia.org/wiki/Liste_der_Gro%C3%9Fst%C3%A4dte_in_Deutschland - Liste der deutschen Großstädte
 * https://de.wikipedia.org/wiki/Liste_der_h%C3%A4ufigsten_Familiennamen_in_Deutschland - Liste der häufigsten Familiennamen
-* https://www.beliebte-vornamen.de/jahrgang/j2015/top-500-2015 - Liste der häufigsten deutschen Vornamen 2015
+* 
 
 ### Fragen
 * Was unterscheidet beispielsweise I-MISC und O-MISC? I / O
+* Wie sollen die NER-Tools vverglichen werden? 
+* Gibt es ein Limit für das GIT? Kann ich es auch als Dropbox benutzen? 
