@@ -32,3 +32,6 @@ Erik Körner, koerner@informatik.uni-leipzig.de (Raum P906)
 #### GermaNER
 * https://github.com/tudarmstadt-lt/GermaNER 
 * https://github.com/MaviccPRP/ger_ner_evals 
+
+#### Named Entity Recognition with Tensorflow
+* https://github.com/riedlma/sequence_tagging#named-entity-recognition-with-tensorflow 
