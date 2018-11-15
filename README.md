@@ -35,3 +35,9 @@ Erik Körner, koerner@informatik.uni-leipzig.de (Raum P906)
 
 #### Named Entity Recognition with Tensorflow
 * https://github.com/riedlma/sequence_tagging#named-entity-recognition-with-tensorflow 
+* 
+
+#### Listen zur Erweiterung der Tools
+* https://de.wikipedia.org/wiki/Liste_der_gr%C3%B6%C3%9Ften_Unternehmen_in_Deutschland_(Wertsch%C3%B6pfung) - Liste der größten deutschen Unternehmen
+* https://de.wikipedia.org/wiki/Liste_der_Gro%C3%9Fst%C3%A4dte_in_Deutschland - Liste der deutschen Großstädte
+* https://de.wikipedia.org/wiki/Liste_der_h%C3%A4ufigsten_Familiennamen_in_Deutschland - Liste der häufigsten Familiennamen
