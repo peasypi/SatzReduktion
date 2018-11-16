@@ -50,3 +50,4 @@ Erik Körner, koerner@informatik.uni-leipzig.de (Raum P906)
 * Was unterscheidet beispielsweise I-MISC und O-MISC? I / O
 * Wie sollen die NER-Tools vverglichen werden? 
 * Gibt es ein Limit für das GIT? Kann ich es auch als Dropbox benutzen? 
+* Kann man Regex nutzen für Datumsbestimmung?
