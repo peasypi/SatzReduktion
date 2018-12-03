@@ -50,5 +50,5 @@ Erik Körner, koerner@informatik.uni-leipzig.de (Raum P906)
 * Was unterscheidet beispielsweise I-MISC und O-MISC? I / O
 * Wie sollen die NER-Tools vverglichen werden? 
 * Gibt es ein Limit für das GIT? Kann ich es auch als Dropbox benutzen? 
-* > We recommend repositories be kept under 1GB each. This limit is easy to stay within if large files are kept out of the repository. If your repository exceeds 1GB, you might receive a polite email from GitHub Support requesting that you reduce the size of the repository to bring it back down.
+> We recommend repositories be kept under 1GB each. This limit is easy to stay within if large files are kept out of the repository. If your repository exceeds 1GB, you might receive a polite email from GitHub Support requesting that you reduce the size of the repository to bring it back down.
 * Kann man Regex nutzen für Datumsbestimmung?
