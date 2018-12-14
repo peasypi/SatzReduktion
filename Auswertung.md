@@ -13,7 +13,7 @@
 
 * Gesamt: 60
 
-## Richtig erkannt:
+### Richtig erkannt:
 * I-ORG : 3/4
 * I-LOC : 20/20
 * I-PER : 31/36
@@ -27,7 +27,7 @@
 * I-ORG : 10
 * I-PER : 26
 
-## Richtig erkannt: 
+### Richtig erkannt: 
 * I-ORG : 7/10
 * I-LOC : 26/34
 * I-PER : 25/26
