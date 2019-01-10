@@ -57,3 +57,6 @@ Erik Körner, koerner@informatik.uni-leipzig.de (Raum P906)
 
 ### Mögliche Schwierigkeiten
 * Satzstellung: Erkennung von Subjekt/Objekt Austausch durch Irgendwer/Irgendwem
+
+### Flair
+* https://github.com/zalandoresearch/flair
