@@ -51,4 +51,21 @@
 
 ```python
 
+# Wechselpräpositionen?
+
 genitivLokal = ["abseits", "außer", "außerhalb", "ausgangs", "beidseits", "beiderseits", "diesseits", "eingangs", "entlang", "fern", "fernab", "inmitten", "innerhalb", "jenseits", "längs", "längsseits", "links", "nördlich", "nordöstlich", "nordwestlich", "oberhalb", "östlich", "rechts", "seitlich", "seitwärts", "südlich", "südöstlich", "südwestlich", "unfern", "unterhalb", "unweit", "vis-à-vis", "westlich", "weitab", "zunächst", "zuseiten"]
+
+dativLokal = ["ab", "aus", "bei", "beim", "gegenüber", "nach", "nächst", "nahe", "vis-à-vis", "von", "vom", "zu", "zum", "zur"]
+
+akkusativLokal = ["bis", "durch", "entlang", "gegen", "gen", "lang", "um", "ums"]
+
+genitivModal = ["abzüglich", "anhand", "anstatt", "anstelle", "aufseiten", "ausschließlich", "ausweislich", "bar", "einbezüglich", "einschließlich", "exklusive", "hinsichtlich", "in puncto", "inklusive", "kraft", "laut", "minus", "mittels", "namens", "ob", "plus", "punkto", "rücksichtlich", "seitens", "statt", "unbeschadet", "uneingedenk", "unerachtet", "ungeachtet", "ungerechnet", "vermittels", "vermittelst", "vermöge", "voller", "vonseiten", "vorbehaltlich", "vorbehältlich", "vorgängig", "zufolge", "zugunsten", "zuhanden", "zulasten", "zuungunsten", "zuzüglich"]
+
+dativModal = ["außer", "entgegen", "entsprechend", "gegenüber", "gemäß", "getreu", "gleich", "laut", "mit", "mitsamt", "nach", "nebst", "samt", "von", "vom", "zu", "zum", "zur", "zuwider"]
+
+akkusativModal = ["betreffend", "bis auf", "contra", "für", "fürs", "gegen", "je", "kontra", "ohne", "per", "pro", "sonder", "versus", "via", "wider"]
+
+genitivKausal = ["angesichts", "anlässlich", "aufgrund", "kraft", "ob", "behufs", "betreffs", "beziehentlich", "bezüglich", "dank", "eingedenk", "gelegentlich", "halber", "infolge", "mangels", "mithilfe", "trotz", "wegen", "willen", "zwecks"]
+
+dativKausal = ["aus", "dank", "zu", "zulieb", "zuliebe"]
+
