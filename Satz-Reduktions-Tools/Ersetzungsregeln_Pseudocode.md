@@ -69,3 +69,5 @@ genitivKausal = ["angesichts", "anlässlich", "aufgrund", "kraft", "ob", "behufs
 
 dativKausal = ["aus", "dank", "zu", "zulieb", "zuliebe"]
 
+akkusativKausal = ["durch" ,"für"]
+
