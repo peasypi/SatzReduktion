@@ -1,4 +1,3 @@
-
 # Ersetzungsregeln: 
 
     Satz iterativ durchgehen, TAGs checken
@@ -47,3 +46,9 @@
             Ignorier das Wort davor, ersetze mit irgendeine Organisation
 
     
+
+### Präpositionen
+
+```python
+
+genitivLokal = ["abseits", "außer", "außerhalb", "ausgangs", "beidseits", "beiderseits", "diesseits", "eingangs", "entlang", "fern", "fernab", "inmitten", "innerhalb", "jenseits", "längs", "längsseits", "links", "nördlich", "nordöstlich", "nordwestlich", "oberhalb", "östlich", "rechts", "seitlich", "seitwärts", "südlich", "südöstlich", "südwestlich", "unfern", "unterhalb", "unweit", "vis-à-vis", "westlich", "weitab", "zunächst", "zuseiten"]
