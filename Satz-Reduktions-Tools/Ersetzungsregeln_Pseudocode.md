@@ -1,5 +1,4 @@
 
-
 # Ersetzungsregeln: 
 
     Satz iterativ durchgehen, TAGs checken
@@ -16,7 +15,7 @@
             ja: behandele Artikel/Demonstrativpronomen und NEs als eins (alles wird später ersetzt) und checke das Wort davor
             nein: was ist es dann?
         Ist es eine Präposition? 
-            ja: zu welchem Dictionary (?) Präpositionen gehört die Präposition? (z.B. Genitiv lokal, Dativ modal) -> Präpositionen kommen doppelt vor, daher ist es da sinnvoll, je nach TAG eine Prioritätenliste zu haben (z.B. Person nicht lokal oder temporal)
+            ja: zu welcher Liste Präpositionen gehört die Präposition? (z.B. Genitiv lokal, Dativ modal) -> Präpositionen kommen doppelt vor, daher ist es da sinnvoll, je nach TAG eine Prioritätenliste zu haben (z.B. Person nicht lokal oder temporal)
                 je nachdem dann NE mit Artikel und Präposition (!) mit dem passenden Wort ERSETZEN: irgendwer / jemand, irgendwem , etc.
             nein: was ist es dann?
         Ist es irgendwas anderes? (Nomen, Verb, etc.)
@@ -28,7 +27,7 @@
             ja: behandele Artikel/Demonstrativpronomen und NEs als eins (alles wird später ersetzt) und checke das Wort davor
             nein: was ist es dann?
         Ist es eine Präposition? 
-            ja: zu welchem Dictionary (?) Präpositionen gehört die Präposition? (z.B. Genitiv lokal, Dativ modal)
+            ja: zu welcher Liste Präpositionen gehört die Präposition? (z.B. Genitiv lokal, Dativ modal)
                 je nachdem dann NE mit Artikel (etc.) und Präposition (!) mit dem passenden Wort ERSETZEN: irgendwo, irgendwohin , etc.
             nein: was ist es dann?
         Ist es irgendwas anderes? (Nomen, Verb, etc.)
@@ -41,7 +40,7 @@
             ja: behandele Artikel/Demonstrativpronomen und NEs als eins (alles wird später ersetzt) und checke das Wort davor
             nein: was ist es dann?
         Ist es eine Präposition? 
-            ja: zu welchem Dictionary (?) Präpositionen gehört die Präposition? (z.B. Genitiv lokal, Dativ modal)
+            ja: zu welcher Liste Präpositionen gehört die Präposition? (z.B. Genitiv lokal, Dativ modal)
                 je nachdem dann NE OHNE (!) Präposition mit dem passenden Wort ERSETZEN: irgendeine / irgendeiner Organisation (Präposition bleibt)
             nein: was ist es dann?
         Ist es irgendwas anderes? (Nomen, Verb, etc.)
