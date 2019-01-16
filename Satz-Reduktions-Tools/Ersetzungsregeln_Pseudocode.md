@@ -54,10 +54,13 @@
 # Wechselpräpositionen?
 
 genitivLokal = ["abseits", "außer", "außerhalb", "ausgangs", "beidseits", "beiderseits", "diesseits", "eingangs", "entlang", "fern", "fernab", "inmitten", "innerhalb", "jenseits", "längs", "längsseits", "links", "nördlich", "nordöstlich", "nordwestlich", "oberhalb", "östlich", "rechts", "seitlich", "seitwärts", "südlich", "südöstlich", "südwestlich", "unfern", "unterhalb", "unweit", "vis-à-vis", "westlich", "weitab", "zunächst", "zuseiten"]
-
+    # genitivLokal && LOC -> irgendwo
+    
 dativLokal = ["ab", "aus", "bei", "beim", "gegenüber", "nach", "nächst", "nahe", "vis-à-vis", "von", "vom", "zu", "zum", "zur"]
+    # dativLokal && LOC -> 
 
 akkusativLokal = ["bis", "durch", "entlang", "gegen", "gen", "lang", "um", "ums"]
+    # akkusativLokal && LOC -> irgendwohin (außer bei um bzw. ums, aber was dann?)
 
 datAkkLokal = ["an", "am", "ans", "auf", "aufs", "hinter", "hinterm", "hintern", "hinters", "in", "im", "ins", "neben", "über", "überm", "übern", "übers", "unter", "unterm", "untern", "unters", "vor", "vorm", "vorn", "vors", "zwischen"]
 
