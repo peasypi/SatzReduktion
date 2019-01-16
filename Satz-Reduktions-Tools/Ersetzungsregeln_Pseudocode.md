@@ -1,14 +1,16 @@
-# Ersetzungsregeln 
+´´´python
 
-Satz iterativ durchgehen, TAGs checken
-    wurde ein TAG erkannt? 
-        ja: ist das darauffolgende Wort auch getaggt?
-        nein: welche NE? Abhängig davon in CASE 1, 2 oder 3 switchen. STOP
-            ja: gehört die darauffolgende NE dazu? 
-                nein: als eigenen TAG behandeln, darauffolgende Wörter auf NEs checken (Vorgang erneut durchgehen)
-                ja: auf darauffolgendes Wort checke, ob zugehörige NE, als ein Wort behandeln, welche NE? Abhängig davon in CASE 1, 2 oder 3 switchen. STOP
+# Ersetzungsregeln: 
 
-##CASE 1: Person 
+    Satz iterativ durchgehen, TAGs checken
+        wurde ein TAG erkannt? 
+            ja: ist das darauffolgende Wort auch getaggt?
+            nein: welche NE? Abhängig davon in CASE 1, 2 oder 3 switchen. STOP
+                ja: gehört die darauffolgende NE dazu? 
+                    nein: als eigenen TAG behandeln, darauffolgende Wörter auf NEs checken (Vorgang erneut durchgehen)
+                    ja: auf darauffolgendes Wort checke, ob zugehörige NE, als ein Wort behandeln, welche NE? Abhängig davon in CASE 1, 2 oder 3 switchen. STOP
+
+## CASE 1: Person 
     Checke das Wort vor der getaggten NE
         Ist es ein Artikel ODER ein Demonstrativpronomen? (PoS)
             ja: behandele Artikel/Demonstrativpronomen und NEs als eins (alles wird später ersetzt) und checke das Wort davor
@@ -20,7 +22,7 @@ Satz iterativ durchgehen, TAGs checken
         Ist es irgendwas anderes? (Nomen, Verb, etc.)
             Ignorier das Wort davor, ersetze mit irgendwer
 
-##CASE 2: Location
+## CASE 2: Location
     Checke das Wort vor der getaggten NE
         Ist es ein Artikel ODER ein Demonstrativpronomen? (PoS)
             ja: behandele Artikel/Demonstrativpronomen und NEs als eins (alles wird später ersetzt) und checke das Wort davor
@@ -33,7 +35,7 @@ Satz iterativ durchgehen, TAGs checken
             Ignorier das Wort davor, ersetze mit irgendwo
     
 
-##CASE 3: Organization
+## CASE 3: Organization
     Checke das Wort vor der getaggten NE
         Ist es ein Artikel ODER ein Demonstrativpronomen? (PoS)
             ja: behandele Artikel/Demonstrativpronomen und NEs als eins (alles wird später ersetzt) und checke das Wort davor
