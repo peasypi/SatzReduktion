@@ -59,15 +59,21 @@ dativLokal = ["ab", "aus", "bei", "beim", "gegenüber", "nach", "nächst", "nahe
 
 akkusativLokal = ["bis", "durch", "entlang", "gegen", "gen", "lang", "um", "ums"]
 
+datAkkLokal = ["an", "am", "ans", "auf", "aufs", "hinter", "hinterm", "hintern", "hinters", "in", "im", "ins", "neben", "über", "überm", "übern", "übers", "unter", "unterm", "untern", "unters", "vor", "vorm", "vorn", "vors", "zwischen"]
+
 genitivModal = ["abzüglich", "anhand", "anstatt", "anstelle", "aufseiten", "ausschließlich", "ausweislich", "bar", "einbezüglich", "einschließlich", "exklusive", "hinsichtlich", "in puncto", "inklusive", "kraft", "laut", "minus", "mittels", "namens", "ob", "plus", "punkto", "rücksichtlich", "seitens", "statt", "unbeschadet", "uneingedenk", "unerachtet", "ungeachtet", "ungerechnet", "vermittels", "vermittelst", "vermöge", "voller", "vonseiten", "vorbehaltlich", "vorbehältlich", "vorgängig", "zufolge", "zugunsten", "zuhanden", "zulasten", "zuungunsten", "zuzüglich"]
 
 dativModal = ["außer", "entgegen", "entsprechend", "gegenüber", "gemäß", "getreu", "gleich", "laut", "mit", "mitsamt", "nach", "nebst", "samt", "von", "vom", "zu", "zum", "zur", "zuwider"]
 
 akkusativModal = ["betreffend", "bis auf", "contra", "für", "fürs", "gegen", "je", "kontra", "ohne", "per", "pro", "sonder", "versus", "via", "wider"]
 
+datAkkModal = ["auf", "in", "neben", "unter"]
+
 genitivKausal = ["angesichts", "anlässlich", "aufgrund", "kraft", "ob", "behufs", "betreffs", "beziehentlich", "bezüglich", "dank", "eingedenk", "gelegentlich", "halber", "infolge", "mangels", "mithilfe", "trotz", "wegen", "willen", "zwecks"]
 
 dativKausal = ["aus", "dank", "zu", "zulieb", "zuliebe"]
 
 akkusativKausal = ["durch" ,"für"]
+
+datAkkKausal = ["auf", "vor"]
 
