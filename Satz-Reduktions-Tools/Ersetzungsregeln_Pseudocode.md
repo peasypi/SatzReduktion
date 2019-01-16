@@ -11,7 +11,7 @@
 ## CASE 1: Person 
     Checke das Wort vor der getaggten NE
         Ist es ein Artikel ODER ein Demonstrativpronomen? (PoS)
-            ja: behandele Artikel/Demonstrativpronomen und NEs als eins (alles wird später ersetzt) und checke das Wort davor
+            ja: behandele Artikel/Demonstrativpronomen/Possessivpronomen und NEs als eins (alles wird später ersetzt) und checke das Wort davor
             nein: was ist es dann?
         Ist es eine Präposition? 
             ja: zu welcher Liste Präpositionen gehört die Präposition? (z.B. Genitiv lokal, Dativ modal) -> Präpositionen kommen doppelt vor, daher ist es da sinnvoll, je nach TAG eine Prioritätenliste zu haben (z.B. Person nicht lokal oder temporal)
@@ -53,17 +53,22 @@
 
 # Wechselpräpositionen?
 
-genitivLokal = ["abseits", "außer", "außerhalb", "ausgangs", "beidseits", "beiderseits", "diesseits", "eingangs", "entlang", "fern", "fernab", "inmitten", "innerhalb", "jenseits", "längs", "längsseits", "links", "nördlich", "nordöstlich", "nordwestlich", "oberhalb", "östlich", "rechts", "seitlich", "seitwärts", "südlich", "südöstlich", "südwestlich", "unfern", "unterhalb", "unweit", "vis-à-vis", "westlich", "weitab", "zunächst", "zuseiten"]
-    # genitivLokal && LOC -> irgendwo
+#LOCATION
+irgendwo = ["um", "ums", "ab", "bei", "beim", "gegenüber", "nächst", "nahe", "vis-à-vis", "abseits", "außer", "außerhalb", "ausgangs", "beidseits", "beiderseits", "diesseits", "eingangs", "entlang", "fern", "fernab", "inmitten", "innerhalb", "jenseits", "längs", "längsseits", "links", "nördlich", "nordöstlich", "nordwestlich", "oberhalb", "östlich", "rechts", "seitlich", "seitwärts", "südlich", "südöstlich", "südwestlich", "unfern", "unterhalb", "unweit", "vis-à-vis", "westlich", "weitab", "zunächst", "zuseiten"]
+irgendwohin = ["nach", "zu", "zum", "zur", "bis", "durch", "entlang", "gegen", "gen", "lang"]
+irgendwoher = ["aus", "von", "vom"]
+
+#ORGANIZATION (irgendeine Organisation / irgendeiner Organisation) -> Präposition wird beibehalten
+irgendeine = ["um", "ums", "ab", "bei", "beim", "gegenüber", "nächst", "nahe", "vis-à-vis", "abseits", "außer", "außerhalb", "ausgangs", "beidseits", "beiderseits", "diesseits", "eingangs", "entlang", "fern", "fernab", "inmitten", "innerhalb", "jenseits", "längs", "längsseits", "links", "nördlich", "nordöstlich", "nordwestlich", "oberhalb", "östlich", "rechts", "seitlich", "seitwärts", "südlich", "südöstlich", "südwestlich", "unfern", "unterhalb", "unweit", "vis-à-vis", "westlich", "weitab", "zunächst", "zuseiten"]
+irgendeiner = ["aus", "von", "vom", "nach", "zu", "zum", "zur", "bis", "durch", "entlang", "gegen", "gen", "lang"]
+
+#PERSON
+irgendwer = 
+irgendwem = ["anstatt", "anstelle"
+irgendwen = 
+irgendjemandes = ["abzüglich", "anhand"
+
     
-dativLokal = ["ab", "aus", "bei", "beim", "gegenüber", "nach", "nächst", "nahe", "vis-à-vis", "von", "vom", "zu", "zum", "zur"]
-    # dativLokal && LOC -> 
-
-akkusativLokal = ["bis", "durch", "entlang", "gegen", "gen", "lang", "um", "ums"]
-    # akkusativLokal && LOC -> irgendwohin (außer bei um bzw. ums, aber was dann?)
-
-datAkkLokal = ["an", "am", "ans", "auf", "aufs", "hinter", "hinterm", "hintern", "hinters", "in", "im", "ins", "neben", "über", "überm", "übern", "übers", "unter", "unterm", "untern", "unters", "vor", "vorm", "vorn", "vors", "zwischen"]
-
 genitivModal = ["abzüglich", "anhand", "anstatt", "anstelle", "aufseiten", "ausschließlich", "ausweislich", "bar", "einbezüglich", "einschließlich", "exklusive", "hinsichtlich", "in puncto", "inklusive", "kraft", "laut", "minus", "mittels", "namens", "ob", "plus", "punkto", "rücksichtlich", "seitens", "statt", "unbeschadet", "uneingedenk", "unerachtet", "ungeachtet", "ungerechnet", "vermittels", "vermittelst", "vermöge", "voller", "vonseiten", "vorbehaltlich", "vorbehältlich", "vorgängig", "zufolge", "zugunsten", "zuhanden", "zulasten", "zuungunsten", "zuzüglich"]
 
 dativModal = ["außer", "entgegen", "entsprechend", "gegenüber", "gemäß", "getreu", "gleich", "laut", "mit", "mitsamt", "nach", "nebst", "samt", "von", "vom", "zu", "zum", "zur", "zuwider"]
@@ -80,3 +85,18 @@ akkusativKausal = ["durch" ,"für"]
 
 datAkkKausal = ["auf", "vor"]
 
+
+genitivLokal = ["abseits", "außer", "außerhalb", "ausgangs", "beidseits", "beiderseits", "diesseits", "eingangs", "entlang", "fern", "fernab", "inmitten", "innerhalb", "jenseits", "längs", "längsseits", "links", "nördlich", "nordöstlich", "nordwestlich", "oberhalb", "östlich", "rechts", "seitlich", "seitwärts", "südlich", "südöstlich", "südwestlich", "unfern", "unterhalb", "unweit", "vis-à-vis", "westlich", "weitab", "zunächst", "zuseiten"]
+    # genitivLokal && LOC -> irgendwo (Präpositionen werden auch ersetzt)
+    
+dativLokal = ["ab", "aus", "bei", "beim", "gegenüber", "nach", "nächst", "nahe", "vis-à-vis", "von", "vom", "zu", "zum", "zur"]
+    # dativLokal && LOC -> irgendwo (Präpositionen werden auch ersetzt)
+    # ! ACHTUNG SONDERFALL: "aus", "von" "vom" -> irgendwoher (Präpositionen werden auch ersetzt)
+    # ! ACHTUNG SONDERFALL: "nach", "zu", "zum", "zur" -> irgendwohin (Präpositionen werden auch ersetzt)
+
+akkusativLokal = ["bis", "durch", "entlang", "gegen", "gen", "lang", "um", "ums"]
+    # akkusativLokal && LOC -> irgendwohin (Präpositionen werden auch ersetzt)
+    # ! ACHTUNG SONDERFALL: "um", "ums" -> irgendwo (Präpositionen werden auch ersetzt)
+
+datAkkLokal = ["an", "am", "ans", "auf", "aufs", "hinter", "hinterm", "hintern", "hinters", "in", "im", "ins", "neben", "über", "überm", "übern", "übers", "unter", "unterm", "untern", "unters", "vor", "vorm", "vorn", "vors", "zwischen"]
+    # Wechselpräpositionen bei Akkusativ mit wohin, bei Dativ mit wo
