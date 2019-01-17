@@ -17,6 +17,9 @@
 * Abschlusspräsentation: https://docs.google.com/presentation/d/19WAhtyTvoAB8iPGCoNefRfwEbIxNPLxk3taE54hK8e0/edit#slide=id.g4c84538f8b_0_60
 
 
+### Report
+* Link: https://docs.google.com/document/d/1m9werGLU5DkYnpZEeW0IBM7NSdT4p7RdLhDkV0neTqM/edit?usp=sharing 
+
 ### Beschreibung
 Reduktion / Vereinfachung von Sätze, z. B.: Ersetzung von
 * Zeitangaben durch irgendwann
