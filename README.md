@@ -15,6 +15,9 @@
 **&rarr;** falscher F-Test da Nicht-Named-Entities als richtig gezählt? (zB. Schule, Straße,...)
 
 
+### Report
+* Link: https://docs.google.com/document/d/1m9werGLU5DkYnpZEeW0IBM7NSdT4p7RdLhDkV0neTqM/edit?usp=sharing 
+
 ### Beschreibung
 Reduktion / Vereinfachung von Sätze, z. B.: Ersetzung von
 * Zeitangaben durch irgendwann
