@@ -9,7 +9,7 @@
 * Nils schreibt Programm für Zeitersetzung
 
 
-* **Deadline 17.01.19**
+#### Deadline 17.01.19
 * Pia, Marie und Nils arbeiten sich in **Flair** ein
 * Marie fertigt F Test für Flair an
 * Michael und Vera überlegen sich Regeln zur späteren Implementierung - 
