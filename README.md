@@ -1,6 +1,6 @@
 # Satz-Reduktion
 
-## Weiteres Vorgehen
+### Weiteres Vorgehen
 * **Deadline 17.01.19**
 * Pia, Marie und Nils arbeiten sich in **Flair** ein
 * Marie fertigt F Test für Flair an
@@ -12,7 +12,7 @@
 * Definition: Named-entity recognition:
 > **Named-entity recognition (NER)** oder **Eigennamenerkennung** ist eine Aufgabe in der Informationsextraktion und bezeichnet die automatische Identifikation und Klassifikation von Eigennamen. Ein Eigenname ist eine Folge von Wörtern, die eine **real existierende Entität** beschreibt, wie z. B. ein Firmenname
 
-&rarr; falscher F-Test da Nicht-Named-Entities als richtig gezählt? (zB. Schule, Straße,...)
+**&rarr;** falscher F-Test da Nicht-Named-Entities als richtig gezählt? (zB. Schule, Straße,...)
 
 
 ### Beschreibung
