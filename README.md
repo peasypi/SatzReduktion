@@ -1,6 +1,14 @@
 # Satz-Reduktion
 
 ### Weiteres Vorgehen
+
+#### Deadline 24.01.19
+* Vera schreibt Programm für Person- und Organisationsersetzung
+* Pia bereitet die Präsentation vor
+* Marie beginnt den Report zu schreiben
+* Nils schreibt Programm für Zeitersetzung
+
+
 * **Deadline 17.01.19**
 * Pia, Marie und Nils arbeiten sich in **Flair** ein
 * Marie fertigt F Test für Flair an
