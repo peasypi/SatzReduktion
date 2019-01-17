@@ -22,6 +22,9 @@
 
 **&rarr;** falscher F-Test da Nicht-Named-Entities als richtig gezählt? (zB. Schule, Straße,...)
 
+### Abschlusspräsentation
+* Link: https://docs.google.com/presentation/d/19WAhtyTvoAB8iPGCoNefRfwEbIxNPLxk3taE54hK8e0/edit?usp=sharing
+
 
 ### Report
 * Link: https://docs.google.com/document/d/1m9werGLU5DkYnpZEeW0IBM7NSdT4p7RdLhDkV0neTqM/edit?usp=sharing 
