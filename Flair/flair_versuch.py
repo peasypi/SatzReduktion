@@ -9,7 +9,7 @@ from flair.models import SequenceTagger
 #file.close()
 
 #Versuch 2 - Textdatei als String?
-#with open(r'/home/pia/Uni/5.Semester/Textmining/saetze_clean.txt',"r") as myfile:
+#with open('/home/pia/Uni/5.Semester/Textmining/saetze_clean.txt',"r") as myfile:
 #   data = myfile.read().replace('\n','')
 
 

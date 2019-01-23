@@ -7,7 +7,7 @@ with open(r'/home/pia/Uni/5.Semester/Textmining/Satz-Reduktion/satz-reduktion/Da
 
 
 # make a sentence
-sentence = Sentence(data, use_tokenizer = True)
+sentence = Sentence(data)
 
 #load the NER tagger
 tagger = SequenceTagger.load('de-ner')
