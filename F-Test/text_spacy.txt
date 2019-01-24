@@ -1,0 +1,138 @@
+Sportunterricht LOC
+Polstermöbeln PER
+Mehrwegverpackungen MISC
+Hause LOC
+Taxi MISC
+Berliner Zeitung ORG
+Informationsstand LOC
+Kita LOC
+Der Mann MISC
+Jonathan PER
+Holst Du mir an meinem Geburtstag MISC
+Beeile dich! MISC
+Lyon LOC
+Nicht-Juden MISC
+Kommandos PER
+Paul Touvier PER
+Sara" PER
+Johanna Lewinski PER
+Gestapo ORG
+Auschwitz LOC
+verschleppte."Am 11 MISC
+Jugend-KZ ORG
+Moringen LOC
+Discher PER
+Juden MISC
+stalinistischen MISC
+sowjetischen Geheimpolizei ORG
+Rhenaniastraße LOC
+Bahngleisen LOC
+Kirche ORG
+Museum LOC
+Bauernhaus LOC
+achten.20 LOC
+Kapstadts Zentrum LOC
+Khayelitshas LOC
+Italien LOC
+Straße LOC
+Tankstelle LOC
+Vulkanausbrüchen MISC
+Lava MISC
+San Vito LOC
+Fahrradweg LOC
+Vachendorf LOC
+Wildenwart LOC
+Ludwigshafen LOC
+Sandhofer Straße LOC
+Friedhilde Willenbücher PER
+Abwaschen MISC
+Brocken PER
+Bürsten MISC
+Sardellenfilets PER
+Kaltes PER
+Meeresgrund LOC
+Land LOC
+Petrus PER
+Regenwasserkanal ORG
+Kanalrohr LOC
+Petra PER
+VW ORG
+Heidis Kurven PER
+Volkswagen ORG
+Skating LOC
+Bangee-Springen LOC
+Klischee LOC
+deutsche MISC
+Cappuccino PER
+Tokio PER
+Sabine PER
+Morgen PER
+Barbaras PER
+Tim PER
+Bundesrepublik LOC
+Deutschlands LOC
+Statistischen Bundesamtes LOC
+Mitglieder LOC
+Rhein LOC
+Neckar Gewässerverunreinigungen PER
+Rhein LOC
+Bodensee LOC
+Kanada LOC
+Schüler/Sportler ORG
+isländische MISC
+Johnny PER
+Damon Wayans PER
+Bruder Seymour PER
+Marlon Wayans PER
+Tag versaut."To my Fairy Queen MISC
+Jilius Bergerijk PER
+unsäglicher MISC
+Kleopatra PER
+Eselsmilch LOC
+Burkhard Frohn PER
+Clapton PER
+Hamamelis-Blütenwasser LOC
+Rhein LOC
+	 ORG
+Rüdersdorf LOC
+Henriette LOC
+Rom LOC
+Michael Stich PER
+Publikums MISC
+barocke MISC
+Jean-Baptiste Lully PER
+Nichts PER
+Jean-Marie Leblanc PER
+Tour de France MISC
+Steiner PER
+Rathenow PER
+Publikums LOC
+Ulrich Bauer PER
+	 ORG
+Fischer PER
+Frank-Walter Steinmeier PER
+Michael PER
+Vertrag mit der Baufirma MISC
+Bibliographischen Instituts ORG
+Staaten LOC
+Russland LOC
+Japan LOC
+Jahr 2000 MISC
+Erfurt LOC
+Jafari PER
+Gerardi PER
+Köln LOC
+Frankfurt LOC
+Marsch LOC
+New York LOC
+Franz Schönhuber PER
+Republikanern ORG
+katholischen Kirche ORG
+Militärs ORG
+Bundesgerichtshof LOC
+Eselsmilch LOC
+Loc:  54
+Misc:  22
+Pers:  42
+Org:  15
+Nr of found entities:  133
