@@ -69,6 +69,11 @@ Erik Körner, koerner@informatik.uni-leipzig.de (Raum P906)
 * https://github.com/riedlma/sequence_tagging#named-entity-recognition-with-tensorflow 
 * 
 
+#### Verzeichnisse Zeiten, Präpositionen usw. 
+
+* [Verzeichnis deutscher Präpositionen](https://de.wiktionary.org/wiki/Verzeichnis:Deutsch/Pr%C3%A4positionen)
+* 
+
 #### Listen zur Erweiterung der Tools
 * https://de.wikipedia.org/wiki/Liste_der_gr%C3%B6%C3%9Ften_Unternehmen_in_Deutschland_(Wertsch%C3%B6pfung) - Liste der größten deutschen Unternehmen
 * https://de.wikipedia.org/wiki/Liste_der_Gro%C3%9Fst%C3%A4dte_in_Deutschland - Liste der deutschen Großstädte
