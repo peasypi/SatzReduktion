@@ -2,6 +2,15 @@
 
 ### Weiteres Vorgehen
 
+#### Deadline 30.01.19
+* Präsentation fertigstellen
+  1. Wer hält den Vortag?
+  2. Ersetzungsquote + Zeit pro 1000 Sätzw
+  3. Git aufräumen
+  4. Gute/Schlechte Sätze als Beispiele für Präsentationsfolie
+  
+
+
 #### Deadline 24.01.19
 * Vera schreibt Programm für Person- und Organisationsersetzung
 * Pia bereitet die Präsentation vor
