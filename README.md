@@ -8,6 +8,8 @@
   2. Ersetzungsquote + Zeit pro 1000 Sätzw
   3. Git aufräumen
   4. Gute/Schlechte Sätze als Beispiele für Präsentationsfolie
+  5. Probleme erklären 
+* Report schreiben
   
 
 
