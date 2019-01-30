@@ -1,0 +1,1 @@
+Im folgenden Order finden sich die Datenzätze die für das Satzreduktion-Projekt genutzt wurden.
