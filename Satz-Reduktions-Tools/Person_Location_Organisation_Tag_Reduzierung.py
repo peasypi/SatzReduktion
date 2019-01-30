@@ -156,7 +156,7 @@ def toReplace(ersetzung,praeposition,count,words):
 # @param words Getaggter Text als Liste 
 
 def replaceLOC(ersetzung,praeposition,words,count):
-
+    
     if words[count-2] in praeposition:
                             words[count] = ersetzung
                             words[count-1] = "Reset"
@@ -167,6 +167,17 @@ def replaceLOC(ersetzung,praeposition,words,count):
                             words[count-1] = "Reset"
                             words[count-2] = "Reset"
                             words[count-3] = "Reset"
+    
+    elif words[count-2] in praelist_wechsel:
+                            words[count] = "IRGENDWO(HIN)/(HER)"
+                            words[count-1] = "Reset"
+                            words[count-2] = "Reset"
+                            
+    elif words[count-3] in praelist_wechsel:
+                            words[count] = "IRGENDWO(HIN)/(HER)"
+                            words[count-1] = "Reset"
+                            words[count-2] = "Reset"
+                            words[count-3] = "Reset"                        
     else: 
                             pass
 
@@ -196,6 +207,7 @@ def replaceORGPER(ersetzung,praeposition,words,count):
 praelist_irgendwo = ["in","um", "ums", "ab", "bei", "beim", "gegenüber", "nächst", "nahe", "vis-à-vis", "abseits", "außer", "außerhalb", "ausgangs", "beidseits", "beiderseits", "diesseits", "eingangs", "entlang", "fern", "fernab", "inmitten", "innerhalb", "jenseits", "längs", "längsseits", "links", "nördlich", "nordöstlich", "nordwestlich", "oberhalb", "östlich", "rechts", "seitlich", "seitwärts", "südlich", "südöstlich", "südwestlich", "unfern", "unterhalb", "unweit", "vis-à-vis", "westlich", "weitab", "zunächst", "zuseiten","In","Um", "Ums", "Ab", "Bei", "Beim", "Gegenüber", "Nächst", "Nahe", "Vis-à-vis", "Abseits", "Außer", "Außerhalb", "Ausgangs", "Beidseits", "Beiderseits", "Diesseits", "Eingangs", "Entlang", "Fern", "Fernab", "Inmitten", "Innerhalb", "Jenseits", "Längs", "Längsseits", "Links", "Nördlich", "Nordöstlich", "Nordwestlich", "Oberhalb", "Östlich", "Rechts", "Seitlich", "Seitwärts", "Südlich", "Südöstlich", "Südwestlich", "Unfern", "Unterhalb", "Unweit", "Vis-à-vis", "Westlich", "Weitab", "Zunächst", "Zuseiten"]
 praelist_irgendwohin = ["nach", "zu", "zum", "zur", "bis", "durch", "entlang", "gegen", "gen", "lang","Nach", "Zu", "Zum", "Zur", "Bis", "Durch", "Entlang", "Gegen", "Gen", "Lang"]
 praelist_irgendwoher = ["aus", "von", "vom","Aus", "Von", "Vom"]
+praelist_wechsel = ["am","Am","an","An","auf","Auf","hinter","Hinter","in","In","neben","Neben","Über","über","unter","Unter","Vor","vor","zwischen","Zwischen","im","Im"]
 
 praelist_irgendeine = ["um","Um","ums","Ums","Ab", "ab", "bei", "beim", "Bei","Beim","Gegenüber","gegenüber", "Nächst","nächst", "nahe","Nahe", "vis-à-vis","Vis-à-vis", "Abseits","abseits", "außer", "Außer","Außerhalb","außerhalb", "Ausgangs","ausgangs", "Beidseits","beidseits", "Beiderseits","beiderseits", "diesseits", "Diesseits","eingangs", "Eingangs","Entlang","entlang", "Fern","fern", "Fernab","fernab", "Inmitten","inmitten","Innerhalb", "innerhalb", "Jenseits","jenseits", "Längs","längs", "Längsseits","längsseits", "Links","links", "Nördlich","nördlich", "Nordöstlich","nordöstlich", "nordwestlich","Nordwestlich", "oberhalb", "Oberhalb","östlich", "Östlich","Rechts","rechts", "Seitlich","seitlich", "seitwärts","Seitwärts","Südlich", "südlich", "Südöstlich","südöstlich", "südwestlich","Südwestlich", "unfern", "Unfern","unterhalb", "Unterhalb","unweit", "Unweit","Westlich", "westlich", "weitab","Weitab","Zunächst", "zunächst", "zuseiten", "Zuseiten"]
 praelist_irgendeiner = ["aus", "von", "vom", "nach", "zu", "zum", "zur", "bis", "durch", "entlang", "gegen", "gen", "lang","Aus", "Von", "Vom", "Nach", "Zu", "Zum", "Zur", "Bis", "Durch", "Entlang", "Gegen", "Gen", "Lang"]        

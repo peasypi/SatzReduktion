@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module satzreduktion</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>satzreduktion</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/Nils/Projekte/Satz-Reduktion/GIT/Flair/satzreduktion.py">/Users/Nils/Projekte/Satz-Reduktion/GIT/Flair/satzreduktion.py</a></font></td></tr></table>
+    <p><tt>Dokumentation&nbsp;zur&nbsp;Praktikumsaufgabe&nbsp;Satzreduktion</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="re.html">re</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-eingabe_Textdatei"><strong>eingabe_Textdatei</strong></a>(pfad)</dt><dd><tt>Lädt&nbsp;die&nbsp;zu&nbsp;reduzierende&nbsp;Textdatei&nbsp;ein<br>
+&nbsp;<br>
+:param&nbsp;pfad:&nbsp;Pfad&nbsp;zu&nbsp;der&nbsp;Textdatei<br>
+:param&nbsp;data:&nbsp;Data&nbsp;speichert&nbsp;die&nbsp;Textdatei&nbsp;als&nbsp;String</tt></dd></dl>
+ <dl><dt><a name="-main"><strong>main</strong></a>()</dt><dd><tt>Führt&nbsp;die&nbsp;Funktionen&nbsp;des&nbsp;Programms&nbsp;aus</tt></dd></dl>
+ <dl><dt><a name="-nerTagger"><strong>nerTagger</strong></a>(data)</dt><dd><tt>Lädt&nbsp;den&nbsp;NER-Tagger&nbsp;und&nbsp;tagged&nbsp;den&nbsp;gegebenen&nbsp;Text&nbsp;damit<br>
+&nbsp;<br>
+:param&nbsp;data:&nbsp;Text&nbsp;als&nbsp;String&nbsp;eingelesen<br>
+:param&nbsp;text_tagged:&nbsp;Enthält&nbsp;den&nbsp;Text&nbsp;mit&nbsp;ner-Tags<br>
+:return:&nbsp;getaggten&nbsp;Text</tt></dd></dl>
+ <dl><dt><a name="-replaceLOC"><strong>replaceLOC</strong></a>(ersetzung, praeposition, words, count)</dt><dd><tt>Die&nbsp;Funktion&nbsp;<a href="#-replaceLOC">replaceLOC</a>(ersetzung,praeposition,words,count)&nbsp;wird&nbsp;aufgerufen,&nbsp;wenn&nbsp;ein&nbsp;LOCATION-Tag&nbsp;entdeckt&nbsp;wurde<br>
+Sie&nbsp;überprüft,&nbsp;ob&nbsp;das&nbsp;Wort&nbsp;vor&nbsp;dem&nbsp;getaggten&nbsp;Wort&nbsp;(bzw.&nbsp;das&nbsp;Wort&nbsp;davor)&nbsp;in&nbsp;der&nbsp;entsprechenden&nbsp;Liste&nbsp;von&nbsp;Präpositionen&nbsp;enthalten&nbsp;ist<br>
+ist&nbsp;dies&nbsp;der&nbsp;Fall,&nbsp;wird&nbsp;das&nbsp;TAG&nbsp;ersetzt&nbsp;und&nbsp;das&nbsp;getaggte&nbsp;Wort&nbsp;sowie&nbsp;die&nbsp;Präposition&nbsp;auf&nbsp;"Reset"&nbsp;gesetzt&nbsp;<br>
+(alle&nbsp;auf&nbsp;"Reset"&nbsp;gesetzten&nbsp;Worte&nbsp;werden&nbsp;nicht&nbsp;in&nbsp;die&nbsp;neue&nbsp;Datei&nbsp;mit&nbsp;eingeschrieben)<br>
+&nbsp;<br>
+:param&nbsp;ersetzung&nbsp;String:&nbsp;Das&nbsp;Wort,&nbsp;mit&nbsp;dem&nbsp;ersetzt&nbsp;werden&nbsp;soll&nbsp;(z.B.&nbsp;"irgendwo")<br>
+:param&nbsp;praeposition&nbsp;Liste&nbsp;von&nbsp;Präpositionen,&nbsp;die&nbsp;jeweils&nbsp;einem&nbsp;Ersetzungswort&nbsp;zugeordnet&nbsp;werden&nbsp;kann&nbsp;<br>
+:param&nbsp;count&nbsp;Zähler&nbsp;(int),&nbsp;der&nbsp;anzeigt,&nbsp;an&nbsp;welcher&nbsp;Stelle&nbsp;im&nbsp;Text&nbsp;(words)&nbsp;sich&nbsp;die&nbsp;Iteration&nbsp;befindet<br>
+:param&nbsp;words&nbsp;Getaggter&nbsp;Text&nbsp;als&nbsp;Liste</tt></dd></dl>
+ <dl><dt><a name="-replaceNER"><strong>replaceNER</strong></a>(data)</dt><dd><tt>Die&nbsp;Funktion&nbsp;<a href="#-replaceNER">replaceNER</a>(X)&nbsp;liest&nbsp;eine&nbsp;getaggte&nbsp;Datei&nbsp;ein,&nbsp;macht&nbsp;aus&nbsp;ihr&nbsp;eine&nbsp;Liste&nbsp;bestehend&nbsp;aus&nbsp;Strings,&nbsp;<br>
+ruft&nbsp;die&nbsp;jeweiligen&nbsp;Ersetzungs-Funktionen&nbsp;auf&nbsp;und&nbsp;fängt&nbsp;den&nbsp;'letzten'&nbsp;Ersetzungsfall&nbsp;auf,&nbsp;<br>
+abschließend&nbsp;wird&nbsp;der&nbsp;ersetzte&nbsp;Text&nbsp;in&nbsp;eine&nbsp;neue&nbsp;Datei&nbsp;geschrieben<br>
+&nbsp;<br>
+:param&nbsp;data:&nbsp;Die&nbsp;einzulesende&nbsp;txt-Datei<br>
+:return:&nbsp;Text&nbsp;reduziert</tt></dd></dl>
+ <dl><dt><a name="-replaceORGPER"><strong>replaceORGPER</strong></a>(ersetzung, praeposition, words, count)</dt><dd><tt>Die&nbsp;Funktion&nbsp;<a href="#-replaceORGPER">replaceORGPER</a>(ersetzung,praeposition,words,count)&nbsp;wird&nbsp;aufgerufen,&nbsp;wenn&nbsp;ein&nbsp;ORGANIZATION-&nbsp;oder&nbsp;ein&nbsp;PERSON-Tag&nbsp;entdeckt&nbsp;wurde<br>
+siehe&nbsp;Funktion&nbsp;replaceLOC,&nbsp;der&nbsp;Unterschied&nbsp;ist,&nbsp;dass&nbsp;die&nbsp;überprüften&nbsp;Präpositionen&nbsp;nicht&nbsp;gelöscht&nbsp;werden,&nbsp;da&nbsp;sie&nbsp;grammatikalisch&nbsp;benötigt&nbsp;werden&nbsp;<br>
+&nbsp;<br>
+:param&nbsp;ersetzung&nbsp;String:&nbsp;Das&nbsp;Wort,&nbsp;mit&nbsp;dem&nbsp;ersetzt&nbsp;werden&nbsp;soll&nbsp;(z.B.&nbsp;"irgendwo")<br>
+:param&nbsp;praeposition:&nbsp;Liste&nbsp;von&nbsp;Präpositionen,&nbsp;die&nbsp;jeweils&nbsp;einem&nbsp;Ersetzungswort&nbsp;zugeordnet&nbsp;werden&nbsp;kann&nbsp;<br>
+:param&nbsp;count:&nbsp;Zähler&nbsp;(int),&nbsp;der&nbsp;anzeigt,&nbsp;an&nbsp;welcher&nbsp;Stelle&nbsp;im&nbsp;Text&nbsp;(words)&nbsp;sich&nbsp;die&nbsp;Iteration&nbsp;befindet<br>
+:param&nbsp;words:&nbsp;Getaggter&nbsp;Text&nbsp;als&nbsp;Liste</tt></dd></dl>
+ <dl><dt><a name="-text_ausgabe"><strong>text_ausgabe</strong></a>(neue_Textdatei, ersetzter_Text)</dt><dd><tt>Speichert&nbsp;den&nbsp;Output&nbsp;in&nbsp;einer&nbsp;neuen&nbsp;Textdatei<br>
+&nbsp;<br>
+:param&nbsp;neue_Textdatei:&nbsp;Name&nbsp;der&nbsp;neuen&nbsp;Textdatei</tt></dd></dl>
+ <dl><dt><a name="-toReplace"><strong>toReplace</strong></a>(ersetzung, praeposition, count, words)</dt><dd><tt>Die&nbsp;Funktion&nbsp;<a href="#-toReplace">toReplace</a>(ersetzung,&nbsp;praeposition,&nbsp;count,&nbsp;words)&nbsp;geht&nbsp;den&nbsp;getaggten&nbsp;Text&nbsp;Wort&nbsp;für&nbsp;Wort&nbsp;durch&nbsp;und&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+ruft,&nbsp;abhängig&nbsp;vom&nbsp;gefundenen&nbsp;Tag,&nbsp;die&nbsp;jeweilige&nbsp;Funktion&nbsp;zum&nbsp;Ersetzen&nbsp;auf<br>
+wird&nbsp;kein&nbsp;Tag&nbsp;gefunden,&nbsp;wird&nbsp;der&nbsp;Count&nbsp;um&nbsp;1&nbsp;erhöht&nbsp;<br>
+wird&nbsp;ein&nbsp;I-&nbsp;oder&nbsp;E-Tag&nbsp;gefunden&nbsp;(Inside,&nbsp;End),&nbsp;wird&nbsp;das&nbsp;getaggte&nbsp;Wort&nbsp;auf&nbsp;"Reset"&nbsp;gesetzt&nbsp;<br>
+&nbsp;<br>
+:param&nbsp;ersetzung&nbsp;String:&nbsp;Das&nbsp;Wort,&nbsp;mit&nbsp;dem&nbsp;ersetzt&nbsp;werden&nbsp;soll&nbsp;(z.B.&nbsp;"irgendwo")<br>
+:param&nbsp;praeposition&nbsp;Liste&nbsp;von&nbsp;Präpositionen,&nbsp;die&nbsp;jeweils&nbsp;einem&nbsp;Ersetzungswort&nbsp;zugeordnet&nbsp;werden&nbsp;kann&nbsp;<br>
+:param&nbsp;count&nbsp;Zähler&nbsp;(int),&nbsp;der&nbsp;anzeigt,&nbsp;an&nbsp;welcher&nbsp;Stelle&nbsp;im&nbsp;Text&nbsp;(words)&nbsp;sich&nbsp;die&nbsp;Iteration&nbsp;befindet<br>
+:param&nbsp;words&nbsp;Getaggter&nbsp;Text&nbsp;als&nbsp;Liste</tt></dd></dl>
+ <dl><dt><a name="-zeitpunkt_ersetzen"><strong>zeitpunkt_ersetzen</strong></a>(text)</dt><dd><tt>Ersetzt&nbsp;Zeitpunkte&nbsp;im&nbsp;Text<br>
+:param&nbsp;text:&nbsp;Text&nbsp;wird&nbsp;auf&nbsp;von&nbsp;Zeitpunkte&nbsp;überprüft&nbsp;und&nbsp;dann&nbsp;durch&nbsp;irgendwann&nbsp;ersetzt<br>
+:return:&nbsp;Text&nbsp;mit&nbsp;ersetzten&nbsp;Zeitpunkten</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>artikel</strong> = ['der', 'Der', 'die', 'Die', 'das', 'Das', 'ein', 'Ein', 'Eine', 'eine', 'des', 'Des', 'Dem', 'dem', 'den', 'Den', 'Eines', 'eines', 'einer', 'Einer', ...]<br>
+<strong>praelist_irgendeine</strong> = ['um', 'Um', 'ums', 'Ums', 'Ab', 'ab', 'bei', 'beim', 'Bei', 'Beim', 'Gegenüber', 'gegenüber', 'Nächst', 'nächst', 'nahe', 'Nahe', 'vis-à-vis', 'Vis-à-vis', 'Abseits', 'abseits', ...]<br>
+<strong>praelist_irgendeiner</strong> = ['aus', 'von', 'vom', 'nach', 'zu', 'zum', 'zur', 'bis', 'durch', 'entlang', 'gegen', 'gen', 'lang', 'Aus', 'Von', 'Vom', 'Nach', 'Zu', 'Zum', 'Zur', ...]<br>
+<strong>praelist_irgendwem</strong> = ['Mit', 'mit', 'Bei', 'bei', 'Zu', 'zu', 'von', 'Von']<br>
+<strong>praelist_irgendwen</strong> = ['auf', 'Auf', 'An', 'an', 'für', 'Für']<br>
+<strong>praelist_irgendwer</strong> = []<br>
+<strong>praelist_irgendwo</strong> = ['in', 'um', 'ums', 'ab', 'bei', 'beim', 'gegenüber', 'nächst', 'nahe', 'vis-à-vis', 'abseits', 'außer', 'außerhalb', 'ausgangs', 'beidseits', 'beiderseits', 'diesseits', 'eingangs', 'entlang', 'fern', ...]<br>
+<strong>praelist_irgendwoher</strong> = ['aus', 'von', 'vom', 'Aus', 'Von', 'Vom']<br>
+<strong>praelist_irgendwohin</strong> = ['nach', 'zu', 'zum', 'zur', 'bis', 'durch', 'entlang', 'gegen', 'gen', 'lang', 'Nach', 'Zu', 'Zum', 'Zur', 'Bis', 'Durch', 'Entlang', 'Gegen', 'Gen', 'Lang']<br>
+<strong>praelist_wechsel</strong> = ['am', 'Am', 'an', 'An', 'auf', 'Auf', 'hinter', 'Hinter', 'in', 'In', 'neben', 'Neben', 'Über', 'über', 'unter', 'Unter', 'Vor', 'vor', 'zwischen', 'Zwischen', ...]</td></tr></table>
+</body></html>

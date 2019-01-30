@@ -2,6 +2,17 @@
 
 ### Weiteres Vorgehen
 
+#### Deadline 30.01.19
+* Präsentation fertigstellen
+  1. Wer hält den Vortag?
+  2. Ersetzungsquote + Zeit pro 1000 Sätzw
+  3. Git aufräumen
+  4. Gute/Schlechte Sätze als Beispiele für Präsentationsfolie
+  5. Probleme erklären 
+* Report schreiben
+  
+
+
 #### Deadline 24.01.19
 * Vera schreibt Programm für Person- und Organisationsersetzung
 * Pia bereitet die Präsentation vor
@@ -62,23 +73,26 @@ Erik Körner, koerner@informatik.uni-leipzig.de (Raum P906)
 * https://github.com/tudarmstadt-lt/GermaNER 
 * https://github.com/MaviccPRP/ger_ner_evals 
 
-### SpaCy
+#### SpaCy
 * https://towardsdatascience.com/named-entity-recognition-with-nltk-and-spacy-8c4a7d88e7da
 
-#### Named Entity Recognition with Tensorflow
-* https://github.com/riedlma/sequence_tagging#named-entity-recognition-with-tensorflow 
-* 
+#### Flair
+* https://github.com/zalandoresearch/flair
+
+#### Verzeichnisse Zeiten, Präpositionen usw. 
+* [Verzeichnis deutscher Präpositionen](https://de.wiktionary.org/wiki/Verzeichnis:Deutsch/Pr%C3%A4positionen)
 
 #### Listen zur Erweiterung der Tools
 * https://de.wikipedia.org/wiki/Liste_der_gr%C3%B6%C3%9Ften_Unternehmen_in_Deutschland_(Wertsch%C3%B6pfung) - Liste der größten deutschen Unternehmen
 * https://de.wikipedia.org/wiki/Liste_der_Gro%C3%9Fst%C3%A4dte_in_Deutschland - Liste der deutschen Großstädte
 * https://de.wikipedia.org/wiki/Liste_der_h%C3%A4ufigsten_Familiennamen_in_Deutschland - Liste der häufigsten Familiennamen
-* 
 
 ### Fragen
 * Was unterscheidet beispielsweise I-MISC und O-MISC? I / O
+> Beginning, Inside, End, Single (jeweils Anfangsbuchstaben) bei flair
 * Wie sollen die NER-Tools verglichen werden? 
-  1. Features des jeweiligen Tools überprüfen. Wie variabel ist es einzusetzen? Welche Funktionen bringt es mit sich?
+>  1. Features des jeweiligen Tools überprüfen. Wie variabel ist es einzusetzen? Welche Funktionen bringt es mit sich?
+>  2. standardisiert (F-Test)
 * Gibt es ein Limit für das GIT? Kann ich es auch als Dropbox benutzen? 
 > We recommend repositories be kept under 1GB each. This limit is easy to stay within if large files are kept out of the repository. If your repository exceeds 1GB, you might receive a polite email from GitHub Support requesting that you reduce the size of the repository to bring it back down.
 * Kann man Regex nutzen für Datumsbestimmung?
@@ -87,5 +101,3 @@ Erik Körner, koerner@informatik.uni-leipzig.de (Raum P906)
 ### Mögliche Schwierigkeiten
 * Satzstellung: Erkennung von Subjekt/Objekt Austausch durch Irgendwer/Irgendwem
 
-### Flair
-* https://github.com/zalandoresearch/flair

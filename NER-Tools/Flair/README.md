@@ -1,0 +1,1 @@
+Hier wurde das NER Tool Flair ausprobiert mit dem ausgewählten Datensatz und ein Ersetzungsprogramm mithilfe von Flair geschrieben.
