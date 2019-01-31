@@ -18,8 +18,15 @@ def main():
     text = eingabe_Textdatei(input("Pfad des einzulesenden Textes: "))
     tagged = nerTagger(text)
     zeitpunkt_ersetzt = zeitpunkt_ersetzen(tagged)
-    text_reduziert = replaceNER(zeitpunkt_ersetzt)
-    text_ausgabe("Textdatei_reduziert.txt", text_reduziert)
+    ner_reduziert = replaceNER(zeitpunkt_ersetzt)
+    pos_tagged = posTagger(ner_reduziert)
+    print(pos_tagged)
+    relativsatz_ersetzt = relativsätze_ersetzen(pos_tagged)
+    print(relativsatz_ersetzt)
+    pos_reduziert = pos_tags_entfernen(relativsatz_ersetzt)
+    print(pos_reduziert)
+    text_ausgabe("Textdatei_reduziert.txt", pos_reduziert)
+
 
 
 def eingabe_Textdatei(pfad):
@@ -37,8 +44,8 @@ def nerTagger(data):
     Lädt den NER-Tagger und tagged den gegebenen Text damit
 
     :param data: Text als String eingelesen
-    :param text_tagged: Enthält den Text mit ner-Tags
-    :return: getaggten Text
+    :param text_tagged_ner: Enthält den Text mit ner-Tags
+    :return: Text mit NER Tags
     """
 
     # make a sentence
@@ -51,9 +58,32 @@ def nerTagger(data):
     tagger.predict(sentence)
 
     # save tagged sentence into a String
-    text_tagged = sentence.to_tagged_string()
+    text_tagged_ner = sentence.to_tagged_string()
 
-    return text_tagged
+    return text_tagged_ner
+
+def posTagger(data):
+    """
+    Lädt den POS-Tagger und tagged den gegebenen Text damit
+
+    :param data: Text als String eingelesen
+    :param text_tagged_pos: Enthält den Text mit pos-Tags
+    :return: Text mit POS Tags
+    """
+
+    # load model
+    tagger = SequenceTagger.load('de-pos')
+
+    # make German sentence
+    sentence = Sentence(data)
+
+    # predict POS tags
+    tagger.predict(sentence)
+
+    # print sentence with predicted tags
+    text_tagged_pos = sentence.to_tagged_string()
+
+    return text_tagged_pos
 
 def zeitpunkt_ersetzen(text):
     """
@@ -85,10 +115,22 @@ def zeitpunkt_ersetzen(text):
     
     return text
 
+
+def relativsätze_ersetzen(text):
+    text_wo_rel = re.sub(r",?\s<PUNCT>\s(die|der|das|den|dem|deren|denen|dessen|welcher|welches|welche|welchem|welchen|was|wenn|wenn|wo|wohin|woher|worüber|wofür|woran|mit|auf)(\s<\w{1,5}>)(\s\b.*\b\s<\w{1,5}>)*\s\w+\s(<AUX>|<VERB>)\s(\,\s)?", "", text, flags=re.IGNORECASE)
+    return text_wo_rel
+
+
+def pos_tags_entfernen(text):
+    text_wo_pos_tags = re.sub(r"<\w{1,5}>\s", "", text)
+    return text_wo_pos_tags
+
+
 ##
 # Die folgenden Methoden sollen Named Entities eines getaggten Textes mit Reduktionswörtern austauschen. 
 # Die getaggten Wörter, die ausgetauscht werden, sind: Organization, Person und Location 
 ##
+
 
 
 def replaceNER(data):
