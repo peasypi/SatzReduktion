@@ -39,6 +39,7 @@ def eingabe_Textdatei(pfad):
     with open(pfad,"r") as myfile:
         data = myfile.read().replace('\n',' ')
     return data
+
 def nerTagger(data):
     """
     Lädt den NER-Tagger und tagged den gegebenen Text damit
@@ -75,7 +76,7 @@ def posTagger(data):
     tagger = SequenceTagger.load('de-pos')
 
     # make German sentence
-    sentence = Sentence(data)
+    sentence = Sentence(data,)
 
     # predict POS tags
     tagger.predict(sentence)
@@ -117,7 +118,7 @@ def zeitpunkt_ersetzen(text):
 
 
 def relativsätze_ersetzen(text):
-    text_wo_rel = re.sub(r",?\s<PUNCT>\s(die|der|das|den|dem|deren|denen|dessen|welcher|welches|welche|welchem|welchen|was|wenn|wenn|wo|wohin|woher|worüber|wofür|woran|mit|auf)(\s<\w{1,5}>)(\s\b.*\b\s<\w{1,5}>)*\s\w+\s(<AUX>|<VERB>)\s(\,\s)?", "", text, flags=re.IGNORECASE)
+    text_wo_rel = re.sub(r",?\s<PUNCT>\s(die|der|das|den|dem|deren|denen|dessen|welcher|welches|welche|welchem|welchen|was|wenn|wenn|wo|wohin|woher|worüber|wofür|woran|mit|auf)(\s<\w{1,5}>)(\s\b\w+\b\s<\w{1,5}>)*\s\w+\s(<AUX>|<VERB>)\s(\,\s)?", "", text)
     return text_wo_rel
 
 
