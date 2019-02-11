@@ -4,7 +4,7 @@ Dokumentation zur Praktikumsaufgabe Satzreduktion
 """
 
 
-# -*- coding: iso-8859-1 -*-
+# -*- coding: UTF-8 -*-
 
 from flair.data import Sentence
 from flair.models import SequenceTagger
@@ -20,11 +20,9 @@ def main():
     zeitpunkt_ersetzt = zeitpunkt_ersetzen(tagged)
     ner_reduziert = replaceNER(zeitpunkt_ersetzt)
     pos_tagged = posTagger(ner_reduziert)
-    print(pos_tagged)
-    relativsatz_ersetzt = relativsätze_ersetzen(pos_tagged)
-    print(relativsatz_ersetzt)
-    pos_reduziert = pos_tags_entfernen(relativsatz_ersetzt)
-    print(pos_reduziert)
+    relativsatz_ersetzt = relativsaetze_ersetzen(pos_tagged)
+    pp_entfernt= praepositionalphrasen_entfernen(relativsatz_ersetzt)
+    pos_reduziert = pos_tags_entfernen(pp_entfernt)
     text_ausgabe("Textdatei_reduziert.txt", pos_reduziert)
 
 
@@ -116,14 +114,25 @@ def zeitpunkt_ersetzen(text):
     return text
 
 
-def relativsätze_ersetzen(text):
-    text_wo_rel = re.sub(r",?\s<PUNCT>\s(die|der|das|den|dem|deren|denen|dessen|welcher|welches|welche|welchem|welchen|was|wenn|wenn|wo|wohin|woher|worüber|wofür|woran|mit|auf)(\s<\w{1,5}>)(\s\b.*\b\s<\w{1,5}>)*\s\w+\s(<AUX>|<VERB>)\s(\,\s)?", "", text, flags=re.IGNORECASE)
+def relativsaetze_ersetzen(text):
+    text_wo_rel = re.sub(r",?\s<PUNCT>\s(die|der|das|den|dem|deren|denen|dessen|welcher|welches|welche|welchem|welchen|was|wenn|wenn|wo|wohin|woher|worüber|wofür|woran|mit|auf)(\s<\w{1,5}>)(\s\b\w*\b\s<\w{1,5}>)*\s\w+\s(<AUX>|<VERB>)\s(\,\s)?", "", text, flags=re.IGNORECASE)
     return text_wo_rel
 
 
 def pos_tags_entfernen(text):
     text_wo_pos_tags = re.sub(r"<\w{1,5}>\s", "", text)
     return text_wo_pos_tags
+
+def praepositionalphrasen_entfernen(text):
+
+
+    for word in text.split():
+        if word in (praelist_kausal or praelist_modal):
+            adp = word
+            text = re.sub(r"{0}\s<ADP>(\s\b\w+\b\s<\w{{1,5}}>\s\b\w+\b\s){{0,3}}<NOUN>".format(adp), "{0} IRGENDETWAS".format(adp), text)
+    return text
+    
+
 
 
 ##
@@ -349,6 +358,45 @@ praelist_irgendeiner = ["aus", "von", "vom", "nach", "zu", "zum", "zur", "bis", 
 praelist_irgendwer = []
 praelist_irgendwem = ["Mit","mit","Bei","bei","Zu","zu","von","Von"]
 praelist_irgendwen = ["auf","Auf","An", "an","für","Für"]
+
+praelist_kausal = [
+    "angesichts",
+    "anlässlich",
+    "aufgrund",
+    "ob",
+    "betreffs",
+    "bezüglich",
+    "dank",
+    "mangels",
+    "trotz",
+    "wegen",
+    "zwecks",
+    "unter",
+    "durch",
+    "für"
+    ]
+praelist_modal = [
+    "abzüglich",
+    "anhand",
+    "anstatt",
+    "anstelle",
+    "exklusive",
+    "hinsichtlich",
+    "in puncto",
+    "inklusive",
+    "minus",
+    "mittels",
+    "seitens",
+    "statt",
+    "vorbehaltlich",
+    "zufolge",
+    "zugunsten",
+    "zuhanden",
+    "zulasten",
+    "zuungunsten",
+    "zuzüglich"
+    "um"
+    ]
 
 # Artikelliste: 
 artikel = ["der","Der","die","Die","das","Das","ein","Ein","Eine","eine","des", "Des","Dem","dem","den", "Den","Eines","eines","einer","Einer","einem","Einem"]
