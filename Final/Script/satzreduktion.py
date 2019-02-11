@@ -117,7 +117,7 @@ def zeitpunkt_ersetzen(text):
 
 def relativsaetze_ersetzen(text):
     text_wo_rel = re.sub(r",?\s<PUNCT>\s(die|der|das|den|dem|deren|denen|dessen|welcher|welches|welche|welchem|welchen|was|wenn|wenn|wo|wohin|woher|worüber|wofür|woran|mit|auf)(\s<\w{1,5}>)(\s\b\w*\b\s<\w{1,5}>)*\s\w+\s(<AUX>|<VERB>)\s(\,\s)?", "", text, flags=re.IGNORECASE)
-=======
+
 def relativsätze_ersetzen(text):
     text_wo_rel = re.sub(r",?\s<PUNCT>\s(die|der|das|den|dem|deren|denen|dessen|welcher|welches|welche|welchem|welchen|was|wenn|wenn|wo|wohin|woher|worüber|wofür|woran|mit|auf)(\s<\w{1,5}>)(\s\b\w+\b\s<\w{1,5}>)*\s\w+\s(<AUX>|<VERB>)\s(\,\s)?", "", text)
     return text_wo_rel
