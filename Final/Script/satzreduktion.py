@@ -34,7 +34,7 @@ def eingabe_Textdatei(pfad):
     :param pfad: Pfad zu der Textdatei
     :param data: Data speichert die Textdatei als String
     """
-    with open(pfad,"r") as myfile:
+    with open("{}".format(pfad),"r") as myfile:
         data = myfile.read().replace('\n',' ')
     return data
 
@@ -117,6 +117,7 @@ def zeitpunkt_ersetzen(text):
 
 def relativsaetze_ersetzen(text):
     text_wo_rel = re.sub(r",?\s<PUNCT>\s(die|der|das|den|dem|deren|denen|dessen|welcher|welches|welche|welchem|welchen|was|wenn|wenn|wo|wohin|woher|worüber|wofür|woran|mit|auf)(\s<\w{1,5}>)(\s\b\w*\b\s<\w{1,5}>)*\s\w+\s(<AUX>|<VERB>)\s(\,\s)?", "", text, flags=re.IGNORECASE)
+    return text_wo_rel
 
 def relativsätze_ersetzen(text):
     text_wo_rel = re.sub(r",?\s<PUNCT>\s(die|der|das|den|dem|deren|denen|dessen|welcher|welches|welche|welchem|welchen|was|wenn|wenn|wo|wohin|woher|worüber|wofür|woran|mit|auf)(\s<\w{1,5}>)(\s\b\w+\b\s<\w{1,5}>)*\s\w+\s(<AUX>|<VERB>)\s(\,\s)?", "", text)
