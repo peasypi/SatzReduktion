@@ -15,7 +15,8 @@ def main():
     """
     Führt die Funktionen des Programms aus
     """
-    text = eingabe_Textdatei(input("Pfad des einzulesenden Textes: "))
+    text_name = input("Pfad des einzulesenden Textes: ")
+    text = eingabe_Textdatei(text_name)
     tagged = nerTagger(text)
     zeitpunkt_ersetzt = zeitpunkt_ersetzen(tagged)
     ner_reduziert = replaceNER(zeitpunkt_ersetzt)
@@ -23,7 +24,7 @@ def main():
     relativsatz_ersetzt = relativsaetze_ersetzen(pos_tagged)
     pp_entfernt= praepositionalphrasen_entfernen(relativsatz_ersetzt)
     pos_reduziert = pos_tags_entfernen(pp_entfernt)
-    text_ausgabe("Textdatei_reduziert.txt", pos_reduziert)
+    text_ausgabe("{}_reduziert.txt".format(text_name), pos_reduziert)
 
 
 
@@ -116,12 +117,9 @@ def zeitpunkt_ersetzen(text):
 
 
 def relativsaetze_ersetzen(text):
-    text_wo_rel = re.sub(r",?\s<PUNCT>\s(die|der|das|den|dem|deren|denen|dessen|welcher|welches|welche|welchem|welchen|was|wenn|wenn|wo|wohin|woher|worüber|wofür|woran|mit|auf)(\s<\w{1,5}>)(\s\b\w*\b\s<\w{1,5}>)*\s\w+\s(<AUX>|<VERB>)\s(\,\s)?", "", text, flags=re.IGNORECASE)
+    text_wo_rel = re.sub(r",?\s<PUNCT>\s(die|der|das|den|dem|deren|denen|dessen|welcher|welches|welche|welchem|welchen|was|wenn|wo|wohin|woher|worüber|wofür|woran|mit|auf)(\s<\w{1,5}>)(\s\b\w*\b\s<\w{1,5}>)*\s\w+\s(<AUX>|<VERB>)\s(\,\s)?", "", text)
     return text_wo_rel
 
-def relativsätze_ersetzen(text):
-    text_wo_rel = re.sub(r",?\s<PUNCT>\s(die|der|das|den|dem|deren|denen|dessen|welcher|welches|welche|welchem|welchen|was|wenn|wenn|wo|wohin|woher|worüber|wofür|woran|mit|auf)(\s<\w{1,5}>)(\s\b\w+\b\s<\w{1,5}>)*\s\w+\s(<AUX>|<VERB>)\s(\,\s)?", "", text)
-    return text_wo_rel
 
 
 def pos_tags_entfernen(text):

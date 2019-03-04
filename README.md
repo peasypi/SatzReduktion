@@ -2,6 +2,12 @@
 
 ### Weiteres Vorgehen
 
+#### Deadline 26.02.19
+* Report fertigstellen
+* Zahlenangaben besser intergrieren
+    - Recherche - Tools, die das besser können
+* Vernünftige Laufzeitübersicht erstellen
+
 #### Deadline 30.01.19
 * Präsentation fertigstellen
   1. Wer hält den Vortag?
