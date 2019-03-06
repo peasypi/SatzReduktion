@@ -2,7 +2,7 @@
 """Dokumentation zur Praktikumsaufgabe Satzreduktion."""
 
 
-# -*- coding: UTF-8 -*-
+# -*- coding: utf-8 -*-
 
 
 import re
@@ -12,12 +12,9 @@ from flair.data import Sentence
 from flair.models import SequenceTagger
 
 
-def main():
-    u"""Führt die Funktionen des Programms aus.
-
-    Einlesen erfolgt durch sys.argv, also durch die Kommandozeile
-    """
-    text_name = sys.argv[1]
+def main(text_input, output_textname):
+    u"""Führt die Funktionen des Programms aus."""
+    text_name = text_input
     text = eingabe_textdatei(text_name)
     tagged = ner_tagger(text)
     zeitpunkt_ersetzt = zeitpunkt_ersetzen(tagged)
@@ -26,8 +23,7 @@ def main():
     relativsatz_ersetzt = relativsaetze_ersetzen(pos_tagged)
     pp_entfernt = praepositionalphrasen_entfernen(relativsatz_ersetzt)
     pos_reduziert = pos_tags_entfernen(pp_entfernt)
-    final = satzzeichen_versetzen(pos_reduziert)
-    text_ausgabe("{}_reduziert.txt".format(sys.argv[2]), final)
+    text_ausgabe("{}_reduziert.txt".format(output_textname), pos_reduziert)
 
 
 def eingabe_textdatei(pfad):
@@ -99,8 +95,8 @@ def zeitpunkt_ersetzen(text):
     """
     # ersetzt Zeitpunkte mit Am/An Tage, Datum, Tageszeiten und Feiertage
     text = re.sub(r"""
-                  ((\b(Am|An|am|an)\b)
-                  \s(\b(\w|ä|ö|ü)*\b\s)?)?
+                  (\b(Am|An|am|an)\b)
+                  \s(\b(\w|ä|ö|ü)*\b\s)?
                   ((\d{1,2}\.(\d{1,2}|(|\s)
                   (Januar|Februar|März|April|Mai|Juni|Juli|August|
                   September|Oktober|November|Dezember))
@@ -114,7 +110,7 @@ def zeitpunkt_ersetzen(text):
                   |Buß- und Bettag|Neujahr|Tag der Deutschen Einheit|
                   Tag der Arbeit|Christi Himmelfahrt|Dreikönigstag|
                   Karfreitag|\w*tag|Tag(en)?)(\.|\s))
-                  """, "IRGENDWANN ", text, flags=re.VERBOSE | re.MULTILINE)
+                  """, "IRGENDWANN ", text, re.VERBOSE)
     # ersetzt Zeitpunkte mit Im/In Monate, Jahreszeiten, Jahre
     text = re.sub(r"""
                   (\b(Im|In|im|in)\b)\s
@@ -124,7 +120,7 @@ def zeitpunkt_ersetzen(text):
                   |Oktober|November|Dezember)|
                   (Frühling|Sommer|Herbst|Winter|Frühjahr))
                   (\s\d{1,4})?(\s|\.)
-                  """, "IRGENDWANN ", text, flags=re.VERBOSE | re.MULTILINE)
+                  """, "IRGENDWANN ", text, re.VERBOSE)
 
     # ersetzt Zeitpunkt Uhrzeit oder Jahreszahl mit Um
     text = re.sub(r"""
@@ -133,7 +129,7 @@ def zeitpunkt_ersetzen(text):
                   (eins|zwei|drei|vier|fünf|sechs|sieben|acht
                   |neun|zehn|elf|zwölf))
                   (:|h|\.)(\s)?(\d{1,2})?)+\s(Uhr)?
-                  """, "IRGENDWANN ", text, flags=re.VERBOSE | re.MULTILINE)
+                  """, "IRGENDWANN ", text, re.VERBOSE)
 
     # ersetzt Zeitpunkt mit ab
     text = re.sub(r"""
@@ -148,7 +144,7 @@ def zeitpunkt_ersetzen(text):
                   \s|(\d{4}\/\d{4}\s)|
                   (Jahre\s|
                   ((\d{1,2}(:|\.)?(\s)?(\d{1,2})?)+\s(Uhr\s)?)))
-                  """, "IRGENDWANN ", text, flags=re.VERBOSE | re.MULTILINE)
+                  """, "IRGENDWANN ", text, re.VERBOSE)
 
     # ersetzt Zeitpunkte die mit "Anfang ..." eingeleitet werden
     text = re.sub(r"""
@@ -158,21 +154,20 @@ def zeitpunkt_ersetzen(text):
                   (Januar|Februar|März|April|Mai|Juni|Juli|August
                   |September|Oktober|November|Dezember)|
                   ((\d{2}er-|\w+)?(|\s)(Jahre(s)?|Woche)))\s
-                  """, "IRGENDWANN ", text, flags=re.VERBOSE | re.MULTILINE)
+                  """, "IRGENDWANN ", text)
     # Temporale Adverbien
     text = re.sub(r"""
                   \b
                   (montags|dienstags|mittwochs|donnerstags|freitags|samstags
                   |sonntags|
                   abends|mittags|morgens|nachts)\b
-                  """, "IRGENDWANN ", text, flags=re.VERBOSE | re.MULTILINE)
+                  """, "IRGENDWANN ", text, re.VERBOSE)
     # ersetzt Jahreszahlen und Daten die wie folgt aussehen dd.mm.yyyy|dd.mm.yy
     text = re.sub(r"""
                   (((Von|von)|
                   (Der|der))\s)?
                   (\d{4}|\d{2}\.\d{2}\.\d{2,4})(\.|\s)?
-                  """, "IRGENDWANN ", text, flags=re.VERBOSE | re.MULTILINE)
-
+                  """, "IRGENDWANN ", text, re.VERBOSE)
     return text
 
 
@@ -190,7 +185,7 @@ def relativsaetze_ersetzen(text):
                          |wo|wohin|woher|worüber|wofür|woran|mit|auf)
                          (\s<\w{1,5}>)(\s\b\w*\b\s<\w{1,5}>)*\s\w+\s
                          (<AUX>|<VERB>)\s(\,\s)?
-                         """, "", text, flags=re.VERBOSE | re.MULTILINE)
+                         """, "", text, re.VERBOSE)
     return text_wo_rel
 
 
@@ -218,21 +213,9 @@ def praepositionalphrasen_entfernen(text):
             text = re.sub(r"""
                           {0}\s<ADP>(\s\b\w+\b\s<\w{{1,5}}>\s\b\w+\b\s){{0,3}}
                           <NOUN>""".format(adp),
-                          "{0} IRGENDETWAS".format(adp), text,
-                          flags=re.VERBOSE | re.MULTILINE
-                          )
+                          "{0} IRGENDETWAS".format(adp), text, re.VERBOSE)
     return text
 
-
-def satzzeichen_versetzen(text):
-    u"""Löscht Leerzeichen vor Satzzeichen."""
-    text = re.sub(r"(\s\.)", ".", text)
-    text = re.sub(r"(\s\s)", " ", text)
-    text = re.sub(r"(\s,)", ",", text)
-    text = re.sub(r"(\s\?)", "?", text)
-    text = re.sub(r"(\s!)", "!", text)
-
-    return text
 ##
 # Die folgenden Methoden sollen Named Entities eines getaggten Textes mit
 # Reduktionswörtern austauschen.
