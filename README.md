@@ -1,5 +1,14 @@
 # Satz-Reduktion
 
+### Installation
+* pip install satzreduktion
+
+### Ausführung
+* satzreduktion in Terminal eingeben. Prompt fragt nach Pfad des einzulesenden Textes
+
+### Final
+* Script ist fertig
+
 ### Weiteres Vorgehen
 
 #### Deadline 26.02.19
